@@ -1,0 +1,10 @@
+.Nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .Nav {
+    gap: 6px;
+  }
+}

@@ -1,0 +1,172 @@
+.UserCard {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 240px;
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: 0px 2px 15px rgba(66, 142, 177, 0.4);
+  }
+
+  .user {
+    height: 60px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 14px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    p {
+      display: flex;
+      gap: 10px;
+    }
+
+    span {
+      flex-shrink: 0;
+      position: relative;
+      width: 80px;
+      font-weight: 600;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: rgb(66, 142, 177);
+      }
+    }
+  }
+
+  .weather {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .currentWeather {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      span {
+        font-size: 20px;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+
+    .minmax {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 14px;
+
+      span:last-child {
+        color: rgb(108, 108, 108);
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .deleteButton {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgb(66, 142, 177);
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40px' height='40px' viewbox='0 0 40 40'%3E%3Cpath d='M 10,10 L 30,30 M 30,10 L 10,30' stroke='rgb(66, 142, 177)' stroke-width='4' stroke-linecap='butt' /%3E%3C/svg%3E");
+    background-size: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(66, 142, 177);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40px' height='40px' viewbox='0 0 40 40'%3E%3Cpath d='M 10,10 L 30,30 M 30,10 L 10,30' stroke='white' stroke-width='4' stroke-linecap='butt' /%3E%3C/svg%3E");
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .UserCard {
+    width: 280px;
+    height: 200px;
+
+    .user {
+      height: 60px;
+      gap: 12px;
+      font-size: 10px;
+
+      img {
+        width: 34px;
+        height: 34px;
+      }
+
+      p {
+        gap: 10px;
+      }
+
+      span {
+        width: 60px;
+      }
+    }
+
+    .weather {
+      gap: 20px;
+
+      .currentWeather {
+        gap: 10px;
+
+        span {
+          font-size: 16px;
+        }
+
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      .minmax {
+        font-size: 12px;
+      }
+    }
+
+    .buttons {
+      gap: 20px;
+
+      button {
+        width: 90px;
+        height: 34px;
+        font-size: 14px;
+      }
+    }
+
+    .deleteButton {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

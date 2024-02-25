@@ -1,0 +1,85 @@
+.Users {
+  margin-top: 20px;
+  padding: 20px 0;
+  height: calc(100vh - 80px - 10px - 50px);
+  overflow: auto;
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+    grid-gap: 20px;
+    justify-content: center;
+  }
+
+  .emptyData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: rgb(66, 142, 177);
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 240px;
+
+    .addButton {
+      width: 70px;
+      height: 70px;
+      background-color: white;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40px' height='40px' viewbox='0 0 40 40'%3E%3Cpath d='M 10,10 L 30,30 M 30,10 L 10,30' stroke='rgb(66, 142, 177)' stroke-width='4' stroke-linecap='butt' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 2px solid rgb(66, 142, 177);
+      border-radius: 50%;
+      transition: border-color 0.3s, background-color 0.3s;
+      transform: rotate(45deg);
+      cursor: pointer;
+
+      &:hover {
+        border-color: white;
+        background-color: rgb(66, 142, 177);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40px' height='40px' viewbox='0 0 40 40'%3E%3Cpath d='M 10,10 L 30,30 M 30,10 L 10,30' stroke='white' stroke-width='4' stroke-linecap='butt' /%3E%3C/svg%3E");
+        color: white;
+      }
+
+      &:active {
+        background-color: rgb(44, 109, 139);
+      }
+
+      &:disabled {
+        border-color: white;
+        background-color: rgb(44, 109, 139);
+        color: white;
+        cursor: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Users {
+    margin-top: 10px;
+
+    .list {
+      grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+    }
+
+    .emptyData {
+      font-size: 18px;
+    }
+
+    .buttonContainer {
+      width: 280px;
+      height: 200px;
+
+      .addButton {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+}

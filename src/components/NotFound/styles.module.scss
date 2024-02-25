@@ -1,0 +1,14 @@
+.NotFound {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: rgb(66, 142, 177);
+}
+
+@media (max-width: 600px) {
+  .NotFound {
+    font-size: 18px;
+  }
+}

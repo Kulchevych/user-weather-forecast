@@ -1,0 +1,45 @@
+.Header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 80px;
+  border: 1px solid rgb(66, 142, 177);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+  .logoContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .logo {
+      width: 44px;
+      height: 44px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: rgb(66, 142, 177);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Header {
+    padding: 0 10;
+    height: 60px;
+
+    .logoContainer {
+      .logo {
+        width: 28px;
+        height: 28px;
+      }
+
+      h1 {
+        width: 80px;
+        font-size: 14px;
+      }
+    }
+  }
+}

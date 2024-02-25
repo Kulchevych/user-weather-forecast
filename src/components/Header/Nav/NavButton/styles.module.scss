@@ -1,0 +1,29 @@
+.NavButton {
+  a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(66, 142, 177);
+
+    &:hover {
+      background-color: rgb(66, 142, 177);
+      color: white;
+    }
+  }
+
+  &.isActive {
+    a {
+      background-color: rgb(66, 142, 177);
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .NavButton {
+    font-size: 14px;
+
+    a {
+      padding: 8px 14px;
+    }
+  }
+}

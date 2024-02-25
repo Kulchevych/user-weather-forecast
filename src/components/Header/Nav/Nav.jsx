@@ -28,7 +28,10 @@ export default function Nav() {
           key={link.label}
           label={link.label}
           path={link.path}
-          isActive={location.pathname.includes(link.path)}
+          isActive={
+            location.pathname.includes(link.path) ||
+            (location.key === "default" && link.path === "/users")
+          }
         />
       ))}
     </ul>
